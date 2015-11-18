@@ -21,3 +21,20 @@
 
 en:
   hello: "Hello world"
+  title:
+    welcome: "Welcome to Framgia Test System"
+    home: "Home"
+    footer:
+      home1: "AA"
+      author: "Framgia Viet Nam"
+      about: "About"
+      contact: "Contact"
+      new: "New"
+    toggle: "Toggle navigation"
+  jumbotron:
+    content1: "aaaa"
+    content2: "bbbb"
+  pages:
+    signup: "Signup"
+    website: "Framgia Test"
+    login: "Login"
