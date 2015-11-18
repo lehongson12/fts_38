@@ -38,3 +38,8 @@ en:
     signup: "Signup"
     website: "Framgia Test"
     login: "Login"
+    logout: "Logout"
+  users:
+    account: "Account"
+    profile: "Profile"
+    setting: "Setting"
