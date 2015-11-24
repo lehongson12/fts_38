@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root "static_pages#home"
   devise_for :users
+  resources :users
+  namespace :admin do
+    root "users#index"
+    resources :users
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
