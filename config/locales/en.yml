@@ -43,3 +43,5 @@ en:
     account: "Account"
     profile: "Profile"
     setting: "Setting"
+  admin:
+    panel: "Admin Panel"
