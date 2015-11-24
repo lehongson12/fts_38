@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-  before_action :admin_only, only: [:index, :show]
+  load_and_authorize_resource param_method: :admin_only
 
   def index
     @users = User.paginate page: params[:page], per_page: Settings.length.page 
