@@ -14,6 +14,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("title.home"), root_path %></li>
         <% if user_signed_in? %>
+          <% if current_user.try :admin? %>
+            <li><%= link_to t("admin.panel"), "#" %></li>
+          <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t "users.account" %><b class="caret"></b>
