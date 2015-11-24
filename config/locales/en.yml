@@ -43,5 +43,16 @@ en:
     account: "Account"
     profile: "Profile"
     setting: "Setting"
+    all: "All Users"
+    update:
+      success: "Users updated successfully"
+      error: "Users updated errors"
+    destroy:
+      success: "Users deleted successfully"
+      error: "Users deleted error"
+    show: "Show Users"
   admin:
     panel: "Admin Panel"
+  button:
+    change_role: "Change Role"
+    delete: "Delete"

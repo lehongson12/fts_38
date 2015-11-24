@@ -33,7 +33,11 @@
         <%= f.password_field :current_password, class: 'form-control', placeholder: 'Current password' %>
       </div>
     </fieldset>
-
+    <div class="form-group">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar, class: "form-control" %>
+    </div>
+    
     <%= f.submit 'Update', :class => 'btn btn-info' %>
   <% end %>
 </div>
