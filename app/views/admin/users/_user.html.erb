@@ -11,6 +11,6 @@
       <%= f.submit t("button.change_role"), class: "btn btn-xs btn-primary", style: "width: 50%" %>
     <% end %>
     <%= link_to t("button.delete"), user, method: :delete,
-                data: {confirm: "Are Your Sure?"}, class: "btn btn-danger" %>
+                data: {confirm: t("alert")}, class: "btn btn-danger" %>
   <% end %>
 </li>
