@@ -56,3 +56,24 @@ en:
   button:
     change_role: "Change Role"
     delete: "Delete"
+    submit: "Submit"
+    question: "Manage Question"
+    edit: "Edit"
+  category:
+    create:
+      success: "Category Created successfully"
+      error: "Category Created Error"
+      new: "Create Category"
+    update:
+      success: "category updated successfully"
+      error: "Category updated error"
+    destroy:
+      success: "category deleted successfully"
+      error: "Could not delete category"
+    all: "All Category"
+    name: "Name"
+    description: "Description"
+    edit: "Edit Category"
+  table:
+    action: "Action"
+  alert: "Are you sure?"
