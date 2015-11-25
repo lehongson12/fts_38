@@ -1,5 +1,5 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :admin_only
+  load_and_authorize_resource param_method: :admin_only
 
   def index
     @categories = Category.paginate page: params[:page], per_page: Settings.length.page

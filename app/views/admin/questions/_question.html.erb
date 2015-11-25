@@ -1,0 +1,18 @@
+<tr>
+  <td class="col-md-1"><%= question.id %></td>
+  <td class="col-md-1"><%= question.content %></td>
+  <% question.answers.each do |answer| %>
+    <td class="col-md-2">
+      <% if answer.correct %>
+        <i class="glyphicon glyphicon-ok"></i>
+      <% elsif %>
+        <i class="glyphicon glyphicon-remove"></i>
+      <% end %>
+      <%= answer.content %>
+    </td>
+  <% end %>
+  <td class="col-md-1">
+    <%= link_to t("button.delete"), admin_category_question_path(@category, question), method: :delete, data: {confirm: t("alert")} %>
+    <%= link_to t("button.edit"), edit_admin_category_question_path(@category, question) %>
+  </td>
+</tr>
