@@ -59,6 +59,20 @@ en:
     submit: "Submit"
     question: "Manage Question"
     edit: "Edit"
+    add_answer: "Add Answer"
+  question:
+    create:
+      success: "question Created successfully"
+      error: "question Created Error"
+      new: "Create question"
+    update:
+      success: "question updated successfully"
+      error: "question updated error"
+    destroy:
+      success: "question deleted successfully"
+      error: "Could not delete question"
+    edit: "Edit question"
+    questions: "Questions"
   category:
     create:
       success: "Category Created successfully"
@@ -74,6 +88,14 @@ en:
     name: "Name"
     description: "Description"
     edit: "Edit Category"
+  answer: "Answer"
+  number:
+    1: "1"
+    2: "2"
+    3: "3"
+    4: "4"
   table:
     action: "Action"
   alert: "Are you sure?"
+  errors:
+    not_choice_correct: "Not choice correct answer"
