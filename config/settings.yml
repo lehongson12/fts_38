@@ -1,2 +1,5 @@
 length:
   page: 10
+  name: 50
+  description: 300
+  truncate: 80

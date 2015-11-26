@@ -1,0 +1,5 @@
+<tr>
+  <td><%= category.id %></td>
+  <td><%= link_to category.name, "#" %></td>
+  <td><%= truncate(category.description, length: Settings.length.truncate) %></td>
+</tr>

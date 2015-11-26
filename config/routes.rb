@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root "static_pages#home"
   devise_for :users
   resources :users
+  resources :categories, only: [:index]
+  resources :questions, only: [:index]
   namespace :admin do
     root "users#index"
     resources :users

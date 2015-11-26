@@ -10,6 +10,7 @@ class Ability
     else
       can :read, Exam
       can :read, Question
+      can :read, Category
       can :create, Exam
       can [:read, :update], Exam
     end
