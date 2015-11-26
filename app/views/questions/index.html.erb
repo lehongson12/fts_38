@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h1><%= t "question.questions" %></h1>
+    <div class="col-md-6 col-md-offset-3 paginate">
+      <%= will_paginate @questions %>
+    </div>
+    <table class="table table-bordered">
+      <tr>
+        <th>#</th>
+        <th><%= t "question.questions" %></th>
+      </tr>
+      <%= render @questions %>
+    </table>
+    <div class="col-md-6 col-md-offset-3 paginate">
+      <%= will_paginate @questions %>
+    </div>
+  </div>
+</div>

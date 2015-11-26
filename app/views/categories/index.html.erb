@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h1><%= t "category.all" %></h1>
+    <table class="table table-striped">
+      <tr>
+        <th>#</th>
+        <th><%= t "category.all" %></th>
+        <th><%= t "category.description" %></th>
+      </tr>
+      <%= render @categories %>
+    </table>
+  </div>
+</div>
