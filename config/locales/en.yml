@@ -102,11 +102,13 @@ en:
     all: "All Exams"
     list: "Examination List"
     exam: "Exam"
+    updated_at: "Updated Date"
   number:
     1: "1"
     2: "2"
     3: "3"
     4: "4"
+    20: "20"
   table:
     action: "Action"
   alert: "Are you sure?"
