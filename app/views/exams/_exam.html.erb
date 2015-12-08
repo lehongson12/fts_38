@@ -2,12 +2,12 @@
   <td class="created_date"><%= exam.created_at %></td>
   <td class="subject"><%= exam.category.name %></td>
   <td class="question_number"><%= exam.category.questions.count %></td>
-  <td class="score">#</td>
+  <td class="score"><%= exam.correct_number %></td>
   <td class="action">
     <% if exam.status? %>
-    <%= link_to t(:view), exam_path(exam) %>
-  <% else %>
-    <%= link_to t(:start), edit_exam_path(exam) %>
-  <% end %>
+      <%= link_to t(:view), exam_path(exam) %>
+    <% else %>
+      <%= link_to t(:start), edit_exam_path(exam) %>
+    <% end %>
   </td>
 </tr>
