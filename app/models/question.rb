@@ -6,6 +6,8 @@ class Question < ActiveRecord::Base
   validates :content, presence: true, uniqueness: true
   validate :check_correct_answer
 
+  scope :random_questions, ->{order "RANDOM() LIMIT #{Settings.exam.limit_questions}"}
+
   private
   def check_correct_answer
     errors.add :base, I18n.t("errors.not_choice_correct") if answers.select{|opt| opt.correct}.blank?
