@@ -1,0 +1,14 @@
+<h1><%= @exam.category.name %></h1>
+<br>
+<div id="time-remaining">
+  <h3><%= t "time-remaining" %></h3>
+</div>
+<div class="form-exam">
+  <%= form_for @exam do |f| %>
+    <%= f.hidden_field :status, value: true %>
+    <%= f.fields_for :results do |builder| %>
+      <%= render "exam_form", f: builder %>
+    <% end %>
+    <%= f.submit t("button.submit"), class: "btn btn-primary", data: {confirm: t("alert")} %>
+  <% end %>
+</div>

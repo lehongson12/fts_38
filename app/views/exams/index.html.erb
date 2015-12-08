@@ -1,0 +1,38 @@
+<% provide :title, t("exam.all") %>
+<h1><%= t "exam.all" %></h1>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-3">
+    <%= form_for @exam do |f| %>
+      <div class="form-group">
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <div class="form-control">
+          <%= f.select :category_id, @categories.map{ |c| [c.name, c.id] } %>
+        </div>
+        <%= f.submit t("exam.create.new"), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+<div class="row exam">
+  <div class="col-md-10 col-md-offset-1">
+    <hr>
+    <h3><%= t "exam.list" %></h3> 
+
+    <table class="table">     
+      <thead>
+        <tr>
+          <td class="created_date"><%= t "exam.created_at" %></td>
+          <td class="subject"><%= t "exam.subject" %></td>
+          <td class="question_number"><%= t "exam.question_number" %></td>
+          <td class="score"><%= t "exam.score" %></td>
+          <td class="action"><%= t "exam.status" %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @exams %>
+      </tbody>
+    </table>     
+  </div>
+</div>

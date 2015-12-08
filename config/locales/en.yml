@@ -89,6 +89,19 @@ en:
     description: "Description"
     edit: "Edit Category"
   answer: "Answer"
+  exam:
+    create:
+      success: "Exam Created successfully"
+      error: "Exam Created error"
+      new: "Create Exam"
+    created_at: "Created Date"
+    subject: "Subject"
+    question_number: "Question number"
+    score: "Score"
+    status: "Status"
+    all: "All Exams"
+    list: "Examination List"
+    exam: "Exam"
   number:
     1: "1"
     2: "2"

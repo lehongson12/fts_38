@@ -16,6 +16,8 @@
         <% if user_signed_in? %>
           <% if current_user.try :admin? %>
             <li><%= link_to t("admin.panel"), "#" %></li>
+          <% else %>
+            <li><%= link_to t("exam.exam"), exams_path %></li>
           <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">

@@ -3,3 +3,5 @@ length:
   name: 50
   description: 300
   truncate: 80
+exam:
+  limit_questions: 20
