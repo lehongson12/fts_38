@@ -15,7 +15,18 @@
         <li><%= link_to t("title.home"), root_path %></li>
         <% if user_signed_in? %>
           <% if current_user.try :admin? %>
-            <li><%= link_to t("admin.panel"), "#" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= t "admin.panel" %><b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t("admin.manage_user"), users_path %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to t("admin.manage_category"), admin_categories_path %>
+                </li>
+              </ul>
+            </li>
           <% else %>
             <li><%= link_to t("exam.exam"), exams_path %></li>
           <% end %>

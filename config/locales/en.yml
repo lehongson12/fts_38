@@ -53,6 +53,8 @@ en:
     show: "Show Users"
   admin:
     panel: "Admin Panel"
+    manage_user: "Manage Users"
+    manage_category: "Manage Category"
   button:
     change_role: "Change Role"
     delete: "Delete"
