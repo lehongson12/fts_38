@@ -15,3 +15,26 @@ User.create!(name:  "User",
              password:              "12345678",
              password_confirmation: "12345678",
              role: 0)
+
+5.times do
+  name = Faker::Lorem.words(2).join(' ')
+  Category.create!(name: name, description: name)
+end
+
+categories = Category.all
+categories.each do |category|
+  20.times do
+    content = Faker::Lorem.word
+    category.questions.create!(content: content)
+  end
+end
+
+questions = Question.all
+questions.each do |question|
+  content = Faker::Lorem.words(2).join(' ')
+  question.answers.create!(content: content, correct: true)
+  3.times do
+    content = Faker::Lorem.words(2).join(' ')
+    question.answers.create!(content: content, correct: false)
+  end
+end

@@ -17,7 +17,7 @@ class Exam < ActiveRecord::Base
   end
 
   def correct_number_the_exams
-    self.correct_number = results.select{|result| result.answer.correct}.count
+    self.correct_number = results.select{|result| result.answer.try(:correct?)}.count
   end
 
   def update_correct_answers
