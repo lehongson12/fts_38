@@ -75,6 +75,8 @@ en:
       error: "Could not delete question"
     edit: "Edit question"
     questions: "Questions"
+    state: "State"
+    subject: "Subject"
   category:
     create:
       success: "Category Created successfully"
@@ -116,3 +118,7 @@ en:
   alert: "Are you sure?"
   errors:
     not_choice_correct: "Not choice correct answer"
+  contribute:
+    question: "Contributes Question"
+    pending: "Pending"
+    accepted: "Accepted"

@@ -1,18 +1,26 @@
-<div class="container">
-  <div class="row">
-    <h1><%= t "question.questions" %></h1>
-    <div class="col-md-6 col-md-offset-3 paginate">
-      <%= will_paginate @questions %>
-    </div>
-    <table class="table table-bordered">
-      <tr>
-        <th>#</th>
-        <th><%= t "question.questions" %></th>
-      </tr>
-      <%= render @questions %>
+<% provide :title, t("contribute.question") %>
+<div class="row">
+  <div class="">
+    <h1 class="text-left"></h1>
+    <%= link_to t("contribute.question"), new_user_question_path, class: "btn btn-primary" %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="col-md-1">#</th>
+          <th class="col-md-3"><%= t("question.questions") %></th>
+          <th class="col-md-2"><%= t("question.subject") %></th>
+          <th class="col-md-1"><%= t("answer") %><%= t("number.1") %></th>
+          <th class="col-md-1"><%= t("answer") %><%= t("number.2") %></th>
+          <th class="col-md-1"><%= t("answer") %><%= t("number.3") %></th>
+          <th class="col-md-1"><%= t("answer") %><%= t("number.4") %></th>
+          <th class="col-md-1"><%= t("question.state") %></th>
+          <th class="col-md-1"><%= t("table.action") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @questions %>
+      </tbody>
     </table>
-    <div class="col-md-6 col-md-offset-3 paginate">
-      <%= will_paginate @questions %>
-    </div>
+    <%= will_paginate %>
   </div>
 </div>

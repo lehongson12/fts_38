@@ -1,5 +1,7 @@
 class Question < ActiveRecord::Base
+  
   belongs_to :category
+  belongs_to :user, class_name: User.name, foreign_key: :user_id
   has_many :answers, dependent: :destroy
   accepts_nested_attributes_for :answers, allow_destroy: true, 
                                 reject_if: proc {|a| a[:content].blank?}
