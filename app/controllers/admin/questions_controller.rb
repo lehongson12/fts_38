@@ -1,6 +1,7 @@
 class Admin::QuestionsController < ApplicationController
   before_action :find_category
-  load_and_authorize_resource
+  load_and_authorize_resource 
+  before_action :admin_only
 
   def index
     @questions = @category.questions.paginate page: params[:page], per_page: Settings.length.page
@@ -55,5 +56,9 @@ class Admin::QuestionsController < ApplicationController
 
   def find_category
     @category = Category.find params[:category_id]
+  end
+
+  def admin_only  
+    redirect_to root_path unless current_user.try :admin?
   end
 end

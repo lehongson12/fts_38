@@ -1,4 +1,26 @@
 <tr>
-  <td><%= question.id %></td>
-  <td><%= question.content %></td>
+  <td class="col-md-1"><%= question.id %></td>
+  <td class="col-md-3"><%= question.content %></td>
+  <td class="col-md-2"><%= question.category.name %></td>
+  <% question.answers.each do |answer| %>
+    <td class="col-md-1">
+      <% if answer.correct %>
+        <i class="glyphicon glyphicon-ok"></i>
+      <% elsif %>
+        <i class="glyphicon glyphicon-remove"></i>
+      <% end %>
+      <%= answer.content %>
+    </td>
+  <% end %>
+  <td class="col-md-1">
+    <% if question.state = 0 %>
+      <b style="color: red"><%= t "contribute.pending" %></b>
+    <% else %>
+      <b style="color: blue"><%= t "contribute.accepted" %></b>
+    <% end %>
+  </td>
+  <td class="col-md-1">
+    <%= link_to t("button.delete"), "#" %>
+    <%= link_to t("button.edit"), "#" %>
+  </td>
 </tr>

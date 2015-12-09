@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root "static_pages#home"
   devise_for :users
-  resources :users
+  resources :users do
+    resources :questions
+  end
   resources :categories, only: [:index] do
     resources :exams, only: [:new, :create, :show]
   end

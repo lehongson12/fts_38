@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   after_initialize :set_default_role, if: :new_record?
 
   has_many :exams
+  has_many :questions, class_name: Question.name, foreign_key: :user_id, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_attached_file :avatar, styles: {large: "900x300>", thumb: "64x64>", medium: "250x250"}, default_url: "/images/:style/missing.png"
