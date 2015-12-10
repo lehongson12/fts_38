@@ -6,8 +6,8 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th class="col-md-1">#</th>
-          <th class="col-md-3"><%= t("category.name") %></th>
+          <th class="col-md-1"><%= sort_link @q, :id, "#" %></th>
+          <th class="col-md-3"><%= sort_link @q, :name, t("category.name") %></th>
           <th class="col-md-4"><%= t("category.description") %></th>
           <th class="col-md-4"><%= t("table.action") %></th>
         </tr>
