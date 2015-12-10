@@ -50,7 +50,7 @@ class Admin::QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit :content, :category_id,
+    params.require(:question).permit :content, :category_id, :state,
          answers_attributes: [:id, :content, :correct, :_destroy]
   end
 

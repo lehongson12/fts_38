@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :exams, only: [:new, :create, :show]
   end
   resources :exams
-  resources :questions, only: [:index]
+  resources :questions
   namespace :admin do
     root "users#index"
     resources :users

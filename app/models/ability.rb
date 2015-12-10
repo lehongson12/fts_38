@@ -9,7 +9,7 @@ class Ability
       can :manage, :all
     else
       can :read, Exam
-      can [:read, :create, :update], Question
+      can [:read, :create, :update, :destroy], Question
       can :read, Category
       can :create, Exam
       can [:read, :update], Exam

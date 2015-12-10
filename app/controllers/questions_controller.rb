@@ -26,11 +26,12 @@ class QuestionsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
   end
 
   def update
     if @question.update_attributes question_params
-      redirect_to @question
+      redirect_to [:user, :questions]
     else
       render :edit
     end

@@ -29,6 +29,7 @@
             </li>
           <% else %>
             <li><%= link_to t("exam.exam"), exams_path %></li>
+            <li><%= link_to t("contribute.question"), user_questions_path(current_user) %></li>
           <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">

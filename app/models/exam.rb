@@ -12,7 +12,7 @@ class Exam < ActiveRecord::Base
 
   private
   def init_questions
-    @questions = category.questions.random_questions
+    @questions = category.questions.random_questions.accepted
     @questions.each {|question| results.build question: question}
   end
 

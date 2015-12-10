@@ -1,5 +1,6 @@
 class Question < ActiveRecord::Base
   
+  enum state: [:pending, :accepted]
   belongs_to :category
   belongs_to :user, class_name: User.name, foreign_key: :user_id
   has_many :answers, dependent: :destroy
@@ -9,6 +10,7 @@ class Question < ActiveRecord::Base
   validate :check_correct_answer
 
   scope :random_questions, ->{order "RANDOM() LIMIT #{Settings.exam.limit_questions}"}
+  scope :accepted, ->{where state: 1}
 
   private
   def check_correct_answer

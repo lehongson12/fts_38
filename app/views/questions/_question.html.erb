@@ -1,7 +1,7 @@
 <tr>
   <td class="col-md-1"><%= question.id %></td>
   <td class="col-md-3"><%= question.content %></td>
-  <td class="col-md-2"><%= question.category.name %></td>
+  <td class="col-md-2"><%= question.category.try(:name?) %></td>
   <% question.answers.each do |answer| %>
     <td class="col-md-1">
       <% if answer.correct %>
@@ -20,7 +20,7 @@
     <% end %>
   </td>
   <td class="col-md-1">
-    <%= link_to t("button.delete"), "#" %>
-    <%= link_to t("button.edit"), "#" %>
+    <%= link_to t("button.delete"), user_question_path(question.user, question), method: :delete, data: {confirm: t("alert")} %>
+    <%= link_to t("button.edit"), edit_user_question_path(question.user, question) %>
   </td>
 </tr>
