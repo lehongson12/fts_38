@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource 
   before_action :authenticate_user!
 
   def index
     @users = User.paginate page: params[:page], per_page: Settings.length.page 
+  end
+
+  def edit
+    @user = User.find params[:id]
   end
 
   def update
@@ -27,6 +32,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit :avatar
+    params.require(:user).permit :avatar, :role
   end
 end
