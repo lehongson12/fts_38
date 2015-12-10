@@ -3,7 +3,8 @@ class Admin::CategoriesController < ApplicationController
   before_action :admin_only
 
   def index
-    @categories = Category.paginate page: params[:page], per_page: Settings.length.page
+    @q = Category.search params[:q]
+    @categories = @q.result.paginate page: params[:page], per_page: Settings.length.page
   end
 
   def new

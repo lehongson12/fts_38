@@ -4,7 +4,8 @@ class Admin::QuestionsController < ApplicationController
   before_action :admin_only
 
   def index
-    @questions = @category.questions.paginate page: params[:page], per_page: Settings.length.page
+    @q = @category.questions.search params[:q]
+    @questions = @q.result.paginate page: params[:page], per_page: Settings.length.page
   end
 
   def new
