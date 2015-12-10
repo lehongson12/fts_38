@@ -1,5 +1,5 @@
 <div class="col-md-6 col-md-offset-3">
-  <%= form_for [:user, @question] do |f| %>
+  <%= form_for [@question.user, @question] do |f| %>
     <div class="form-control">
       <%= f.select :category_id, options_for_select(@categories.map{|c| [c.name, c.id]}) %>
     </div>

@@ -4,8 +4,8 @@
       <%= f.label :content %>
       <%= f.text_field :content, class: "form-control" %>
     </div>
-    <%= f.hidden_field :category_id, value: :category_id %>
-    <%= f.hidden_field :state, value: 1 %>
+    <%= f.hidden_field :category_id, value: @category.id %>
+    <%= f.select(:state, Question.states.keys.map {|state| [state.titleize,state]}) %>
 
     <%= f.label :answers %>
     <div class="form-group">
