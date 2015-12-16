@@ -124,4 +124,6 @@ en:
     accepted: "Accepted"
   statistic_email: "UserMailer#stastic_email"
   hi: "Hi"
-  subject_email: "FTS : Statistic exam every month"
+  subject_email:
+    statistic: "FTS : Statistic exam every month"
+    exam_expired: "FTS : Exam created expired time" 
