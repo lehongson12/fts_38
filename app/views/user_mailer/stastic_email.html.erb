@@ -1,0 +1,10 @@
+<h1><%= t "statistic_email" %></h1>
+
+<p>
+  <%= t "hi" %> <%= @user.name %>
+
+  <% @user.exams.each do |exam| %>
+    <%= exam.category.name %>
+    <%= exam.correct_number %>
+  <% end %>
+</p>
