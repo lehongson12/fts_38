@@ -122,3 +122,6 @@ en:
     question: "Contributes Question"
     pending: "Pending"
     accepted: "Accepted"
+  statistic_email: "UserMailer#stastic_email"
+  hi: "Hi"
+  subject_email: "FTS : Statistic exam every month"

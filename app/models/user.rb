@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
   def set_default_role
     self.role ||= :user
   end
+
+  def self.send_statistic_exam
+    @user = User.all
+    @user.each do |user|
+      UserMailer.stastic_email(user.email).deliver
+    end
+  end
 end
