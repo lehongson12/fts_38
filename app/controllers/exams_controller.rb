@@ -14,6 +14,7 @@ class ExamsController < ApplicationController
 
   def create
     @exam.user = current_user
+    Delayed::Job.enqueue NewsletterJob.new(current_user), 0, 8.hours.from_now unless @exam.status = false
     if @exam.save
       flash[:success] = t "exam.create.success"
     else
