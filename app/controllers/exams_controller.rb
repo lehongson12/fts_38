@@ -28,6 +28,7 @@ class ExamsController < ApplicationController
 
   def update
     if @exam.update_attributes exam_params
+      EmailWorker.perform_at(10.minutes.from_now, 1) unless @exam.status
       redirect_to @exam
     else
       render :edit
