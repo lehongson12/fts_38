@@ -17,7 +17,9 @@ class Admin::CategoriesController < ApplicationController
 
   def create
     @category = Category.new category_params
-    if @category.save
+    @users = User.all
+    if @category.save      
+      UserNotificationService.new(@users).notify
       flash[:success] = t "category.create.success"
       redirect_to [:admin, :categories]
     else

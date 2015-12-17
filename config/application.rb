@@ -35,5 +35,6 @@ module Base
     config.active_job.queue_adapter = :sidekiq
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
     config.autoload_paths += Dir["#{config.root}/app/workers/**/"]
+    config.autoload_paths += Dir["#{config.root}/app/services/**/"]
   end
 end
