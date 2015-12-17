@@ -17,4 +17,10 @@ class UserMailer < ApplicationMailer
 
     mail to: email, subject: "FTS : Finish Exam"
   end
+  
+  def notifications_new_category email
+    @greeting = t "hi"
+
+    mail to: email, subject: "FTS : New category"
+  end
 end
