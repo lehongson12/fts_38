@@ -5,6 +5,6 @@ FactoryGirl.define do
     content {Faker::Name.name}
     user {FactoryGirl.create :user}
     category
-    state 0
+    state false
   end
 end
