@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
   accepts_nested_attributes_for :answers, allow_destroy: true, 
                                 reject_if: proc {|a| a[:content].blank?}
   validates :content, presence: true, uniqueness: true
-  validate :check_correct_answer
+  #validate :check_correct_answer
 
   scope :random_questions, ->{order "RANDOM() LIMIT #{Settings.exam.limit_questions}"}
   scope :accepted, ->{where state: 1}
