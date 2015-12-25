@@ -64,5 +64,6 @@ group :test do
   gem "launchy"
   gem "shoulda-matchers"
   gem "rspec-mocks"
+  gem "rspec-activemodel-mocks"
 end
 
